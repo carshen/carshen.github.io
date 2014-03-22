@@ -1,0 +1,132 @@
+body {
+	text-align: center;
+}
+
+ul {
+	text-align: left;
+}
+a {
+	text-decoration:none;
+	color: rgba(44, 67, 127, 0.5);
+}
+a:hover{
+	color: rgba(44, 67, 127, 0.9);
+}
+
+hr {
+	border: 0;
+	height:0;
+	border-top: 1px solid   rgba(64, 67, 73, 0.9);
+}
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  font-size: 115%;
+  text-align: justify;
+  width: 42em;
+  margin: 3em auto 2em;
+  line-height: 1.5em;
+}
+.title {
+	color: rgba(173, 40, 65, 1);
+	display:inline;
+}
+.header h1 {
+	display:inline;
+}
+
+.header a {
+	color: rgba(44, 67, 127, 0.5);
+}
+
+.header a:hover {
+	color: rgba(44, 67, 127, 0.9);
+}
+a.contact-me {
+	margin-left:1em;
+	color: rgba(51,0,0,0.7);
+}
+a.contact-me:hover{
+	color: rgba(155,0,0,0.7);
+}
+#me-intro img{
+	margin-right:1em;
+	margin-left:-0.7em;
+}
+.projects {
+	list-style:none;
+	margin-left:-2em;
+	margin-top:-0.5em;
+}
+.projects li {
+	font-size:0.9em;
+}
+.posts {
+	list-style:none;
+	margin-left:-2em;
+	margin-top:-0.5em;
+}
+.posts li {
+	font-size:0.9em;
+}
+.footer {
+	font-size:0.85em;
+	color: rgba(51,0,0,0.7);
+}
+.footer a {
+	color: rgba(51,0,0,0.9);
+}
+.footer a:hover{
+	color: rgba(155,0,0,0.9);
+}
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+/* standard */
+.post {
+	margin-bottom:2em;
+}
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4em;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35em;
+}
+
+.post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .2em;
+}
+
+.post pre code {
+  border: none;
+}
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
+.post-date {
+	color: rgba(51,51,51,0.5);
+	font-size:0.9em;
+	margin-top:-1em;
+}
+.disqus-div{
+	margin-top:2em;
+}

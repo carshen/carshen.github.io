@@ -10,33 +10,23 @@
         <link rel="stylesheet" href="/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
+        <!--link rel="stylesheet" href="/css/main.css"-->
+	<link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
 
         <div class="site">
           <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+            <h2 class="title">{{ site.name }}</h2>
+		<a class="contact-me" href="https://github.com/carshen">GitHub</a>
+		<a class="contact-me" href="http://www.linkedin.com/pub/carolyn-shen/2b/845/1">LinkedIn</a>
+		<a class="contact-me" href="mailto:shen.carolyn@gmail.com">Email</a>
           </div>
-
+	  <hr>
           {{ content }}
-
+	  <hr>
           <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
+	  	<p>This site was generated using <a href="http://jekyllrb.com/">Jekyll</a>. I'm going to LA Hacks next month!!!</p>
           </div>
         </div>
 

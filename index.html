@@ -1,13 +1,22 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Carolyn Shen
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="me-intro">
+	<p><img style="float:left;" height=150px src="/assets/me.jpg">Howdy. I'm a Computer Science major at the University of British Columbia, class of '16. From January to April 2014 I'm on Co-op as a web developer at <a href="http://tradablebits.com">Tradable Bits</a>.</p>
+	<p>I post all kinds of neat things I learn on my blog that you'll find down the page. You can find the source code for my projects on my <a href="https://github.com/carshen">Github</a>.</p>
+	<p> This summer I'll be working on a project under <a href="http://www.cs.ubc.ca/~mitchell/">Dr. Ian Mitchell</a> on developing an interpolation scheme for the robot path planning problem. You can watch for updates on my blog. :)</p>
+</div>
+	<h2>Projects</h2>
+	<ul class="projects">
+		<li><a href="/pokepong">poke-pong</a>: a simple, yet adorable and fun HTML5 pong game featuring a Poké ball.</li>
+	</ul>
+	<h2>Blog Posts</h2>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li>{{ post.date | date_to_string }}: <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
 </div>
