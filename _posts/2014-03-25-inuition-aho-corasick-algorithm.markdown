@@ -53,8 +53,8 @@ good, but I will explain it further.
 
 Here the text string is: 'abccab' and our dictionary is {'a', 'ab',
 'bc', 'bca', 'c', 'caa'}. We will keep a string called our 'matched
-string' which denotes a string which is a prefix of any word in the
-dictionary. Ignore the coloured lines.
+string' which denotes a what we have read from the text string but not truncated yet. It is a string which is a prefix of any word in the
+dictionary. Ignore the coloured lines in the image.
 
 ![Wikipedia image](/assets/A_diagram_of_the_Aho-Corasick_string_search_algorithm_extracted.png)
 
