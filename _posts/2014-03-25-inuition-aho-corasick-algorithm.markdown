@@ -77,7 +77,7 @@ is a word, so output that.
 
 
 Notice that whenever we try to append a letter and as a result, our
-matched string is not a word, we have to move to a different node
+matched string is not a prefix, we have to move to a different node
 which marks the end of the next largest suffix before we can append
 the letter again. The transition from our current node to the node of
 the next largest suffix is called a 'failure transition' from our
