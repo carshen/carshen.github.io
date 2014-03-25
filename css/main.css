@@ -148,10 +148,6 @@ a:visited { color: #a0a; }
   border: none;
 }
 
-.post img {
-  max-height:200px;
-}
-
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;

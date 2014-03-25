@@ -99,7 +99,7 @@ keywords present and their respective indices.
 Ignoring the construction of how to get these failure transitions, you
 can see that the runtime to construct the trie is O(m) and to process
 the text is O(n) since we do a single pass through the text, and we
-can truncate at most n characters.
+can truncate at most n characters. We'll cover how to get these failure transitions next time, but note that this will happen in O(n).
 
 
 I hope my discussion has given you a basic intuition on how
