@@ -18,7 +18,7 @@ The naive way, obviously, is to split the text into words and for each
 word, check it against every expletive to see if it matches or not. In
 the worst case, when there are no expletives in the text, the runtime
 of your filter will be O(n*m) because you will end up checking every
-single character of the text against your set of m words.
+single character of the text against your set of words.
 
 
 I'm going to explain how you can use the Aho-Corasick string matching
