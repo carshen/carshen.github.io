@@ -56,7 +56,7 @@ Here the text string is: 'abccab' and our dictionary is {'a', 'ab',
 string' which denotes a string which is a prefix of any word in the
 dictionary.
 
-![Wikipedia image](/assets/A_diagram_of_the_Aho_Corasick_string_search_algorithm.svg)
+![Wikipedia image](/assets/A_diagram_of_the_Aho-Corasick_string_search_algorithm_extracted.png)
 
 [Find it here.](http://upload.wikimedia.org/wikipedia/commons/9/90/A_diagram_of_the_Aho-Corasick_string_search_algorithm.svg)
 
