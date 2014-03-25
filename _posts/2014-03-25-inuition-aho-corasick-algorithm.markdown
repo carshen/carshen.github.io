@@ -86,7 +86,7 @@ match, the fail state of 'ab' is the 'b' which descends from the root.
 
 
 This way of assigning failure states is the special feature of the
-Aho-Corasick algorithm allows the text to be processed in one pass: we
+Aho-Corasick algorithm which allows the text to be processed in one pass: we
 keep updating our matched string, outputting a word and index whenever
 the matched string matches one of the words in the dictionary. When
 our matched string is no longer a prefix of any word in the
@@ -100,6 +100,7 @@ Ignoring the construction of how to get these failure transitions, you
 can see that the runtime to construct the trie is O(m) and to process
 the text is O(n) since we do a single pass through the text, and we
 can truncate at most n characters. We'll cover how to get these failure transitions next time, but note that this will happen in O(n).
+Outputting occurs in O(z) though note that in the example 'aaaa' with dictionary {'a', 'aa', 'aaa', 'aaaa'} we will have 10 outputs since every single occurrence is found.
 
 
 I hope my discussion has given you a basic intuition on how
