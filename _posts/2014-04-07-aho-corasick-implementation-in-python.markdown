@@ -5,7 +5,7 @@ date: 2014-04-07 00:11:54
 categories: jekyll update
 ---
 
-In [a previous article](http://carshen.github.io/data-structures/algorithms/2014/03/25/inuition-aho-corasick-algorithm.html), we covered the intuition behind the Aho-Corasick string matching algorithm. Now, I will explain its implementation in Python. There are a variety of ways to do this. I will explain the way which uses an adjacency list to store the trie. Arguably, it is much cleaner to uses classes and objects, but I decided not to do that because that's way overdone, and I'm a hipster (if you want that version, you can email me for it – it's quite easy to change it to use classes).
+In [a previous article](http://carshen.github.io/data-structures/algorithms/2014/03/25/inuition-aho-corasick-algorithm.html), we covered the intuition behind the Aho-Corasick string matching algorithm. Now, I will explain its implementation in Python. There are a variety of ways to do this. I will explain the way which uses an adjacency list to store the trie. Arguably, it is much cleaner to use classes and objects, but I decided not to do that because that's way overdone, and I'm a hipster (if you want that version, you can email me for it – it's quite easy to change it to use classes).
 
 Recall from last time that we needed to construct the trie, and then set its failure transitions. After the trie is constructed, we traverse the trie as we are reading in the input text and output the positions that we find the keywords at. Essentially, these three parts form the structure of the algorithm.
 
