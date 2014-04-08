@@ -2,7 +2,7 @@
 layout: post
 title: "Implementation of the Aho-Corasick Algorithm in Python"
 date: 2014-04-07 00:11:54
-categories: jekyll update
+categories: data-structures algorithms
 ---
 
 In a previous article, we covered the intuition behind the Aho-Corasick string matching algorithm. Now, I will explain its implementation in Python. There are a variety of ways to do this. I will explain the way which uses an adjacency list to store the trie. Arguably, it is much cleaner to use classes and objects, but I decided not to do that because that's way overdone, and I'm a hipster (if you want that version, you can email me for it – it's quite easy to change it to use classes).
