@@ -12,7 +12,7 @@ inserting a string of length L into set<string> will take O(L*logk)
 for k words in the set whereas inserting into a trie takes O(L) and 2)
 the same goes for searching.
 
-Say we want to put {kimbap, kimberley, korean, apple, app, jello} into
+Say we want to put {kimbap, kimberley, apple, app, jello} into
 a trie. Our trie will look like this:
 
 ![Trie image](/assets/trie1.png)
