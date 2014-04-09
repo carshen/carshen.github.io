@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Implementation of the Aho-Corasick Algorithm in Python"
-date: 2014-04-07 00:11:54
+title: "Implementation of the Aho-Corasick algorithm in Python"
+date: 2014-04-07 22:11:54
 categories: data-structures algorithms
 ---
 
@@ -33,7 +33,7 @@ def add_keywords(keywords):
 		add_keyword(keyword)
 {% endhighlight %}
 
-We also write a helper find_next_state which takes a node and a value, and returns the id of the child of that node whose value matches value, or else None if none found.
+We also write a helper `find_next_state` which takes a node and a value, and returns the id of the child of that node whose value matches value, or else `None` if none found.
 
 {% highlight python linenos %}
 def find_next_state(current_state, value):
@@ -68,7 +68,7 @@ def add_keyword(keyword):
 	AdjList[current_state]["output"].append(keyword)
 {% endhighlight %}
 
-The while loop finds the longest prefix of the keyword which exists in the trie so far, and will exit when we can no longer match more characters at index j. The for loop goes through the rest of the keyword, creating a new node for each character and appending it to `AdjList`. `len(AdjList) – 1` gives the id of the node we are appending, since we are adding to the end of `AdjList`.
+The while loop finds the longest prefix of the keyword which exists in the trie so far, and will exit when we can no longer match more characters at index j. The for loop goes through the rest of the keyword, creating a new node for each character and appending it to `AdjList`. `len(AdjList) - 1` gives the id of the node we are appending, since we are adding to the end of `AdjList`.
 
 When we have completed adding the keyword in the trie, `AdjList[current_state]["output"].append(keyword)` will append the keyword to the output of the last node, to mark the end of the keyword at that node.
 
@@ -83,15 +83,15 @@ We append the output of the fail state to `child`'s output because since the fai
 
 {% highlight python linenos %}
 def set_fail_transitions():
-	queue = deque()
+	q = deque()
 	child = 0
 	for node in AdjList[0]["next_states"]:
-		queue.append(node)
+		q.append(node)
 		AdjList[node]["fail_state"] = 0
-	while len(queue) != 0:
-		r = queue.popleft()
+	while q:
+		r = q.popleft()
 		for child in AdjList[r]["next_states"]:
-			queue.append(child)
+			q.append(child)
 			state = AdjList[r]["fail_state"]
 			while find_next_state(state, AdjList[child]["value"]) == None \
  and state != 0:
@@ -105,7 +105,7 @@ AdjList[AdjList[child]["fail_state"]]["output"]
 
 {% endhighlight %}
 
-Finally, our trie is constructed. Given an input, line, we iterate through each character in line, going up to the fail state when we no longer match the next character in line. At each node, we check to see if there is any output, and we will capture all the outputted words and their respective indices. `(i-len(j) + 1` is for writing an index at the beginning of the word)
+Finally, our trie is constructed. Given an input, line, we iterate through each character in line, going up to the fail state when we no longer match the next character in line. At each node, we check to see if there is any output, and we will capture all the outputted words and their respective indices. (`i-len(j) + 1` is for writing an index at the beginning of the word)
 
 {% highlight python linenos %}
 def get_keywords_found(line):
@@ -114,7 +114,7 @@ def get_keywords_found(line):
 	current_state = 0
 	keywords_found = []
 
-	for i in range(0, len(line)):
+	for i in range(len(line)):
 		while find_next_state(current_state, line[i]) is None and current_state != 0:
 			current_state = AdjList[current_state]["fail_state"]
 		current_state = find_next_state(current_state, line[i])
